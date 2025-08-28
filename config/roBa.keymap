@@ -83,6 +83,18 @@
 
             tap-ms = <20>;
         };
+
+        cpi_200: pmw3610_cpi_200 {
+            compatible = "zmk,behavior-sensor-config";
+            label = "CPI 200";
+            sensor-config = <200>;
+        };
+
+        cpi_400: pmw3610_cpi_400 {
+            compatible = "zmk,behavior-sensor-config";
+            label = "PMW3610 CPI 400";
+            sensor-config = <400>;
+        };
     };
 
     keymap {
@@ -96,7 +108,7 @@
 &kp ESCAPE          &kp LEFT_CONTROL  &kp LEFT_ALT  &lt_to_layer_0 1 LC(SPACE)  &lt 2 SPACE  &kp RIGHT_COMMAND      &kp BACKSPACE      &lt 3 ENTER                             &mt RIGHT_ALT BACKSLASH
             >;
 
-            sensor-bindings = <&scroll_up_down>;
+            sensor-bindings = <&cpi_400 &scroll_up_down>;
         };
 
         MOUSE {
@@ -106,6 +118,8 @@
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans    &trans    &trans    &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                &trans
             >;
+
+            sensor-bindings = <&cpi_200>;
         };
 
         FUNCTION {
@@ -144,6 +158,8 @@
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
             >;
+
+            sensor-bindings = <&cpi_200>;
         };
 
         NUM {
