@@ -87,12 +87,14 @@
         cpi_200: pmw3610_cpi_200 {
             compatible = "zmk,behavior-sensor-config";
             label = "CPI 200";
+            #sensor-binding-cells = <1>;
             cpi = <200>;
         };
 
         cpi_400: pmw3610_cpi_400 {
             compatible = "zmk,behavior-sensor-config";
             label = "PMW3610 CPI 400";
+            #sensor-binding-cells = <1>;
             cpi = <400>;
         };
     };
