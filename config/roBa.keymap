@@ -110,7 +110,7 @@
 &kp ESCAPE          &kp LEFT_CONTROL  &kp LEFT_ALT  &lt_to_layer_0 1 LC(SPACE)  &lt 2 SPACE  &kp RIGHT_COMMAND      &kp BACKSPACE      &lt 3 ENTER                             &mt RIGHT_ALT BACKSLASH
             >;
 
-            sensor-bindings = <&cpi_400 &scroll_up_down>;
+            sensor-bindings = <&scroll_up_down>;
         };
 
         MOUSE {
