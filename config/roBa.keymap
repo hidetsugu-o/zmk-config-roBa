@@ -109,7 +109,7 @@
 &mt LEFT_ALT GRAVE   &kp RG(Z)  &kp RG(LS(V))  &lt_to_layer_0 1 LC(SPACE)  &lt 2 SPACE  &lt 4 LC(UP_ARROW)      &kp BACKSPACE  &lt 3 ENTER                             &mt RIGHT_ALT BACKSLASH
             >;
 
-            sensor-bindings = <&scroll_up_down>;
+            sensor-bindings = <&inc_dec_kp LC(LEFT) LC(RIGHT_ARROW)>;
         };
 
         MOUSE {
@@ -120,18 +120,18 @@
 &trans      &trans      &trans      &trans      &trans      &trans      &trans  &trans                                    &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp LC(LEFT_ARROW) LC(RIGHT_ARROW)>;
+            sensor-bindings = <&inc_dec_kp LC(LS(TAB)) LC(TAB)>;
         };
 
         FUNCTION {
             bindings = <
-&kp EXCLAMATION  &kp AT     &kp POUND  &kp DOLLAR  &kp PERCENT                        &kp CARET  &kp AMPERSAND  &kp STAR  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
-&kp GRAVE        &kp TILDE  &trans     &trans      &trans       &trans       &trans   &trans     &trans         &trans    &kp EQUAL             &kp PLUS
-&kp F1           &kp F2     &kp F3     &kp F4      &kp F5       &kp F11      &kp F12  &kp F6     &kp F7         &kp F8    &kp F9                &kp F10
-&trans           &trans     &trans     &trans      &trans       &trans       &trans   &trans                                                    &kp F12
+&kp EXCLAMATION  &kp AT     &kp POUND  &kp DOLLAR  &kp PERCENT                            &kp CARET  &kp AMPERSAND  &kp STAR  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
+&kp GRAVE        &kp TILDE  &trans     &trans      &trans       &kp RG(F12)      &trans   &trans     &trans         &trans    &kp EQUAL             &kp PLUS
+&kp F1           &kp F2     &kp F3     &kp F4      &kp F5       &kp F11          &kp F12  &kp F6     &kp F7         &kp F8    &kp F9                &kp F10
+&trans           &trans     &trans     &trans      &trans       &trans           &trans   &trans                                                    &kp F12
             >;
 
-            sensor-bindings = <&inc_dec_kp LC(LS(TAB)) LC(TAB)>;
+            sensor-bindings = <&inc_dec_kp LC(MINUS) F12>;
         };
 
         ARROW {
@@ -142,7 +142,7 @@
 &trans            &trans                  &trans          &trans                   &trans   &trans      &trans  &trans                                                     &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
+            sensor-bindings = <&inc_dec_kp DOWN_ARROW UP_ARROW>;
         };
 
         BT {
@@ -163,6 +163,8 @@
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
             >;
+
+            sensor-bindings = <&inc_dec_kp C_AC_ZOOM_OUT C_AC_ZOOM_IN>;
         };
 
         NUM {
