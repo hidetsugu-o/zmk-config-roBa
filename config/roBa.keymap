@@ -153,7 +153,7 @@
 &trans  &trans        &trans        &trans        &trans  &trans      &trans       &trans                                                  &bt BT_CLR_ALL
             >;
 
-            sensor-bindings = <&inc_dec_kp K_VOLUME_DOWN K_VOLUME_UP>;
+            sensor-bindings = <&inc_dec_kp RG(LS(AT_SIGN)) RG(AT_SIGN)>;
         };
 
         SCROLL {
