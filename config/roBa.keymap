@@ -142,7 +142,7 @@
 &trans            &trans                  &trans          &trans                   &trans   &trans      &trans  &trans                                                     &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp DOWN_ARROW UP_ARROW>;
+            sensor-bindings = <&inc_dec_kp UP_ARROW DOWN_ARROW>;
         };
 
         BT {
