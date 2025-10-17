@@ -114,10 +114,10 @@
 
         MOUSE {
             bindings = <
-&kp N1      &kp N2      &kp N3      &kp N4      &kp N5                          &kp N6      &kp N7    &kp N8    &kp N9    &kp N0
-&kp LA(N1)  &kp LA(N2)  &kp LA(N3)  &kp LA(N4)  &kp LA(N5)  &trans      &trans  &kp LA(N6)  &mkp MB1  &mkp MB3  &mkp MB2  &trans
-&trans      &trans      &trans      &trans      &trans      &trans      &trans  &trans      &trans    &trans    &trans    &trans
-&trans      &trans      &trans      &trans      &trans      &trans      &trans  &trans                                    &trans
+&kp N1      &kp N2      &kp N3          &kp N4          &kp N5                              &kp N6      &kp N7    &kp N8    &kp N9    &kp N0
+&kp LA(N1)  &kp LA(N2)  &kp LA(N3)      &kp LA(N4)      &kp LA(N5)      &trans      &trans  &kp LA(N6)  &mkp MB1  &mkp MB3  &mkp MB2  &trans
+&trans      &trans      &kp RG(LS(N3))  &kp RG(LS(N4))  &kp RG(LS(N5))  &trans      &trans  &trans      &trans    &trans    &trans    &trans
+&trans      &trans      &trans          &trans          &trans          &trans      &trans  &trans                                    &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LC(LS(TAB)) LC(TAB)>;
