@@ -169,9 +169,9 @@
 
         NUM {
             bindings = <
-&kp F19       &kp F20       &kp F21                &kp F22             &kp F23                                      &trans  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &trans
+&kp F19       &kp LS(F19)   &kp LC(F19)            &kp F20             &kp LS(F20)                                  &trans  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &trans
 &kp F13       &kp F14       &kp F15                &kp F16             &kp F17                &kp F18          &trans  &trans           &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &trans
-&kp F24       &kp LS(F24)   &kp LC(LA(RG(SPACE)))  &kp LC(F24)         &kp LC(RG(LS(N4)))      &trans           &trans  &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &trans
+&kp LC(F20)   &kp LA(F20)   &kp LC(LA(RG(SPACE)))  &kp RG(F20)         &kp LC(RG(LS(N4)))      &trans           &trans  &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &trans
 &trans        &trans        &trans                  &trans              &trans                  &trans           &kp LA(C)  &kp LA(V)                                         &kp LA(N)
             >;
         };
