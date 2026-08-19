@@ -77,9 +77,31 @@
             bindings = <&kp ESC &kp LANGUAGE_2>;
             label = "TOGGLEVIMMODE";
         };
+
+        ctrl_alt_gui_space: ctrl_alt_gui_space {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <40>;
+            tap-ms = <40>;
+            bindings
+                = <&macro_press &kp LEFT_CONTROL &kp LEFT_ALT &kp LEFT_GUI>
+                , <&macro_tap &kp SPACE>
+                , <&macro_release &kp LEFT_GUI &kp LEFT_ALT &kp LEFT_CONTROL>
+                ;
+            label = "CTRL_ALT_GUI_SPACE";
+        };
     };
 
     behaviors {
+        ctrl_alt_gui_space_mt: ctrl_alt_gui_space_mt {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            bindings = <&ctrl_alt_gui_space>, <&kp>;
+            flavor = "balanced";
+            quick-tap-ms = <0>;
+            tapping-term-ms = <200>;
+        };
+
         lt_to_layer_0: lt_to_layer_0 {
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_TAP_TO_0";
@@ -105,7 +127,7 @@
             bindings = <
 &mt LEFT_CONTROL Q   &kp W               &kp E               &kp R                       &kp T                                                        &kp Y        &kp U  &kp I        &kp O    &mt RIGHT_CONTROL P
 &mt RIGHT_COMMAND A  &kp S               &kp D               &kp F                       &kp G        &kp RG(LC(Q))                    &kp MINUS      &kp H        &kp J  &kp K        &kp L    &mt RIGHT_COMMAND SEMI
-&mt LEFT_SHIFT Z     &kp X               &kp C               &kp V                       &kp B        &mt LC(LA(LG(SPACE))) LC(V)      &kp PLUS       &kp N        &kp M  &lt 5 COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
+&mt LEFT_SHIFT Z     &kp X               &kp C               &kp V                       &kp B        &ctrl_alt_gui_space_mt 0 LC(V)   &kp PLUS       &kp N        &kp M  &lt 5 COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
 &mt LEFT_ALT GRAVE   &lt 4 LC(UP_ARROW)  &kp RG(LEFT_SHIFT)  &lt_to_layer_0 1 LC(SPACE)  &lt 2 SPACE  &lt 6 RG(Z)                      &kp BACKSPACE  &lt 3 ENTER                               &mt RIGHT_ALT BACKSLASH
             >;
 
